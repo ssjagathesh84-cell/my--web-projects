@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Music Artists 2026 - Showcase</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #131b3e 0%, #070913 100%);
+      background-attachment: fixed;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding-bottom: 60px;
+    }
+
+    #artists, #genres {
+      scroll-margin-top: 90px;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(7, 9, 19, 0.95);
+      padding: 15px 40px;
+      border-bottom: 1px solid #1db954;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1db954;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #1db954;
+    }
+
+    .spotify-btn {
+      background-color: #1db954;
+      color: #000000 !important;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .spotify-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .page-title {
+      text-align: center;
+      color: #1db954;
+      margin: 40px 0 10px;
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Marquee Scroller */
+    marquee {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      display: block;
+    }
+
+    marquee figure {
+      display: inline-block;
+      margin: 0 20px 0 0;
+      text-align: center;
+      cursor: pointer;
+      vertical-align: top;
+      transition: transform 0.3s ease;
+    }
+
+    marquee figure img {
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 16px;
+      border: 2px solid rgba(29, 185, 84, 0.3);
+      display: block;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    marquee figure figcaption {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    marquee figure:hover {
+      transform: scale(1.08) translateY(-5px);
+    }
+
+    marquee figure:hover img {
+      border-color: #1db954;
+      box-shadow: 0 0 20px rgba(29, 185, 84, 0.8);
+    }
+
+    marquee figure:hover figcaption {
+      color: #1db954;
+    }
+
+    /* Featured Genres Section */
+    .genre-section-title {
+      text-align: center;
+      color: #1db954;
+      margin: 90px 0 25px;
+      font-size: 1.8rem;
+    }
+
+    .genre-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+
+    .genre-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(29, 185, 84, 0.3);
+      padding: 25px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .genre-card:hover {
+      transform: translateY(-6px);
+      border-color: #1db954;
+    }
+
+    .genre-card h3 {
+      color: #1db954;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .genre-card p {
+      font-size: 0.9rem;
+      color: #b3b3b3;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body id="home">
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="navbar">
+    <a href="#home" class="nav-logo">🎵 SoundWave</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#artists">Top Artists</a></li>
+      <li><a href="#genres">Genres</a></li>
+      <li><a href="https://open.spotify.com" target="_blank" class="spotify-btn">Spotify Playlist ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section: Artists Title -->
+  <h1 id="artists" class="page-title">Top 10 Famous Music Artists in the World - 2026</h1>
+
+  <!-- Marquee Scroller with all 10 Artists -->
+  <div class="container">
+    <marquee
+      behavior="scroll"
+      direction="left"
+      scrollamount="15"
+      onmouseover="this.stop();"
+      onmouseout="this.start();">
+
+      <!-- Artist 1 -->
+      <figure>
+        <img src="https://goldenglobes.com/wp-content/uploads/2024/12/Best_Performance_by_a_Female_Actor_in_a_Supporting_Role_in_any_Motion_Picture_Wicked_Ariana_Grande_Out_of_Character_Headshot.jpeg" alt="Ariana Grande">
+        <figcaption>Ariana Grande</figcaption>
+      </figure>
+
+      <!-- Artist 2 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNwFRdogLOqR8YBKiVMszNyYMcRt3L6vk_FEVS8tzYFg&s=10" alt="Taylor Swift">
+        <figcaption>Taylor Swift</figcaption>
+      </figure>
+
+      <!-- Artist 3 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-GQDSwDnj4r-KUi9CQWu9aRKVZHNM6Fg_3hhGP7cXyyPBJtlcwCMO4rrZ&s=10" alt="Bad Bunny">
+        <figcaption>Bad Bunny</figcaption>
+      </figure>
+
+      <!-- Artist 4 -->
+      <figure>
+        <img src="https://media.vogue.co.uk/photos/5ebe670d7bbee730114002e0/master/w_1600%2Cc_limit/003-Drake-vogue-130520-credit-Getty-Images.jpg" alt="Drake">
+        <figcaption>Drake</figcaption>
+      </figure>
+
+      <!-- Artist 5 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4uNz6RzmQlaKGu9yhSSd_cHyZ2DEkzlX9ByYYd7SzTyLsGgBwqWyLeD4&s=10" alt="The Weeknd">
+        <figcaption>The Weeknd</figcaption>
+      </figure>
+
+      <!-- Artist 6 -->
+      <figure>
+        <img src="https://seatgeekimages.com/performers-landscape/morgan-wallen-fdf508/562860/1100x1900.jpg?auto=avif%2Cwebp&width=3840&quality=75" alt="Morgan Wallen">
+        <figcaption>Morgan Wallen</figcaption>
+      </figure>
+
+      <!-- Artist 7 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHY9OimLP4pdBYEcnczRdX57XpX3kIvmrgcSq7-G3vp5byi8a17EdQ9E&s=10" alt="Sabrina Carpenter">
+        <figcaption>Sabrina Carpenter</figcaption>
+      </figure>
+
+      <!-- Artist 8 -->
+      <figure>
+        <img src="https://media.gettyimages.com/id/2267845123/photo/the-tonight-show-starring-jimmy-fallon-episode-2272-pictured-j-hope-jin-suga-jimin-rm-jung.jpg?s=612x612&w=gi&k=20&c=YspNTX--EPVVQL3dOXoYOIClOCshDzHe5kS2HpShKUg=" alt="BTS">
+        <figcaption>BTS</figcaption>
+      </figure>
+
+      <!-- Artist 9 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMW6RCM89lBAy8NCYERHNrEAyhZfvRlDwaf7DYpk-3dZgygtx030bnQTFE&s=10" alt="Bruno Mars">
+        <figcaption>Bruno Mars</figcaption>
+      </figure>
+
+      <!-- Artist 10 -->
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPBAZIFBhHx7TRWEf9IFSPaB20kuAdf6bL2c4zrNRpfg&s=10" alt="Olivia Rodrigo">
+        <figcaption>Olivia Rodrigo</figcaption>
+      </figure>
+
+    </marquee>
+  </div>
+
+  <!-- Featured Music Genres Section -->
+  <h2 id="genres" class="genre-section-title">Featured Music Genres</h2>
+  <div class="genre-container">
+    <div class="genre-card">
+      <h3>Pop & Electronic</h3>
+      <p>Modern electronic beats with energetic chart-topping synthesizer melodies.</p>
+    </div>
+    <div class="genre-card">
+      <h3>R&B & Soul</h3>
+      <p>Smooth rhythms, expressive soulful vocals, and passionate storytelling.</p>
+    </div>
+    <div class="genre-card">
+      <h3>Hip-Hop & Rap</h3>
+      <p>Dynamic lyrical cadence and strong beats layered over heavy basslines.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeless Novels - Literary Showcase</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #e6edf3;
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #161b22;
+      padding: 15px 40px;
+      border-bottom: 1px solid #30363d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #d4af37;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    header {
+      background-color: #161b22;
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    header h1 {
+      color: #d4af37;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #8b949e;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      color: #d4af37;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 8px;
+      margin: 40px 0 25px 0;
+    }
+
+    /* 4 Columns Grid Layout */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    /* Individual Book Card */
+    .book-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .book-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .book-info h3 a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .book-info h3 a:hover {
+      color: #d4af37;
+    }
+
+    .book-info h4 {
+      font-size: 0.85rem;
+      font-weight: normal;
+      color: #8b949e;
+      font-family: Arial, sans-serif;
+      line-height: 1.4;
+      margin-top: 6px;
+      margin-bottom: 15px;
+    }
+
+    .read-link {
+      display: inline-block;
+      text-align: center;
+      background-color: transparent;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .read-link:hover {
+      background-color: #d4af37;
+      color: #0d1117;
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+  <a href="#" class="nav-logo">📚 Classic Archive</a>
+  <ul class="nav-links">
+    <li><a href="#19th">19th-Century</a></li>
+    <li><a href="#20th">20th-Century</a></li>
+    <li><a href="https://books.google.com" target="_blank">Google Books</a></li>
+  </ul>
+</nav>
+
+  <!-- Header -->
+  <header>
+    <h1>The Classic Literary Repository</h1>
+    <p>A curated collection of 20 famous novels in the English language, spanning classic romances, Gothic tales, dystopian futures, and modern masterpieces.</p>
+  </header>
+
+  <div class="container">
+
+    <!-- SECTION 1: Classic & 19th-Century Novels (8 Books) -->
+    <h2  id="19th" class="section-title">Classic and 19th-Century Novels</h2>
+    <div class="books-grid">
+
+      <!-- Book 1 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471134746/pride-and-prejudice-9781471134746_lg.jpg" alt="Pride and Prejudice">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Pride_and_Prejudice/n0gJAAAAQAAJ?hl=en&gbpv=0" target="_blank">Pride and Prejudice</a></h3>
+            <h4>Jane Austen (1813) – A witty look at love, class, and family expectations in rural England.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Pride_and_Prejudice/n0gJAAAAQAAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 2 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/91tZ6THMOpL._AC_UF1000,1000_QL80_.jpg" alt="Frankenstein">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Frankenstein/CR4ZEAAAQBAJ?hl=en&gbpv=0" target="_blank">Frankenstein</a></h3>
+            <h4>by Mary Shelley (1818) – A scientist creates a living monster, sparking a dark sci-fi debate.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Frankenstein/CR4ZEAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 3 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/81pwJjgcwwL._AC_UF1000,1000_QL80_.jpg" alt="Jane Eyre">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Jane_Eyre/lzQJAAAAQAAJ?hl=en&gbpv=0" target="_blank">Jane Eyre</a></h3>
+            <h4>by Charlotte Brontë (1847) – An orphan girl finds work as a governess and falls for her brooding boss.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Jane_Eyre/lzQJAAAAQAAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 4 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/91s5mflmSxL._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg" alt="Wuthering Heights">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Wuthering_Heights/WvWaNrg3s8MC?hl=en&gbpv=0" target="_blank">Wuthering Heights</a></h3>
+            <h4>by Emily Brontë (1847) – A fierce, tragic tale of love and revenge on the Yorkshire moors.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Wuthering_Heights/WvWaNrg3s8MC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 5 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/715ZqWWOxBL._AC_UF1000,1000_QL80_.jpg" alt="David Copperfield">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/David_Copperfield/N_0KAAAAYAAJ?hl=en&gbpv=0" target="_blank">David Copperfield</a></h3>
+            <h4>by Charles Dickens (1850) – A young boy grows up through hardship in Victorian England.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/David_Copperfield/N_0KAAAAYAAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 6 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/610qaD5PskL.jpg" alt="Moby-Dick">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Moby_Dick/zQi2RA6VxYEC?hl=en&gbpv=0" target="_blank">Moby-Dick</a></h3>
+            <h4>by Herman Melville (1851) – A captain hunts a giant white whale in a dangerous obsession.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Moby_Dick/zQi2RA6VxYEC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 7 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://i.etsystatic.com/18232385/r/il/149af8/4874151585/il_1080xN.4874151585_bv5u.jpg" alt="Great Expectations">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Great_expectations/Lpz3IkKCPZcC?hl=en&gbpv=0" target="_blank">Great Expectations</a></h3>
+            <h4>by Charles Dickens (1861) – An orphan named Pip receives help from a secret benefactor.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Great_expectations/Lpz3IkKCPZcC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 8 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzHx59ILSGiKShZYZA3gS3ur7_QY1lCVF1ENmEXEak3B6Ed6-r" alt="The Picture of Dorian Gray">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/The_Picture_of_Dorian_Gray/gY1CAQAAMAAJ?hl=en&gbpv=0" target="_blank">The Picture of Dorian Gray</a></h3>
+            <h4>by Oscar Wilde (1890) – A young man stays young while his hidden portrait ages with his sins.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/The_Picture_of_Dorian_Gray/gY1CAQAAMAAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+    </div>
+
+    <!-- SECTION 2: 20th-Century Masterpieces (12 Books) -->
+    <h2 id="20th" class="section-title">20th-Century Masterpieces</h2>
+    <div class="books-grid">
+
+      <!-- Book 9 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/91fSidoCbkL._UF1000,1000_QL80_.jpg" alt="Heart of Darkness">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Heart_of_Darkness/GXA2dZ1Xe8sC?hl=en&gbpv=0" target="_blank">Heart of Darkness</a></h3>
+            <h4>by Joseph Conrad (1899) – A voyage up the Congo River exposes the dark side of human nature.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Heart_of_Darkness/GXA2dZ1Xe8sC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 10 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/71YF1hHLw7L.jpg" alt="The Great Gatsby">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Heart_of_Darkness/GXA2dZ1Xe8sC?hl=en&gbpv=0" target="_blank">The Great Gatsby</a></h3>
+            <h4>by F. Scott Fitzgerald (1925) – A wealthy man chases a lost love in the roaring twenties.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Heart_of_Darkness/GXA2dZ1Xe8sC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 11 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/51VBG93MM9L._AC_UF1000,1000_QL80_.jpg" alt="A Passage to India">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/A_passage_to_India/7CLoEAAAQBAJ?hl=en&gbpv=0" target="_blank">A Passage to India</a></h3>
+            <h4>by E.M. Forster (1924) – Cultural tensions rise between British and Indian people during the Raj.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/A_passage_to_India/7CLoEAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 12 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/917t3Joq2WL._UF1000,1000_QL80_.jpg" alt="Brave New World">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Un_mundo_feliz/sRK2DwAAQBAJ?hl=en&gbpv=0" target="_blank">Brave New World</a></h3>
+            <h4>by Aldous Huxley (1932) – A chilling look at a future world run by tech and drug control.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Un_mundo_feliz/sRK2DwAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 13 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/71wANojhEKL.jpg" alt="1984">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/1984_Nineteen_Eighty_Four/0vQCEAAAQBAJ?hl=en&gbpv=0" target="_blank">1984</a></h3>
+            <h4>George Orwell (1949) – A man rebels against total government control and constant surveillance.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/1984_Nineteen_Eighty_Four/0vQCEAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 14 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/91YXaY-I9VS._AC_UF1000,1000_QL80_.jpg" alt="The Catcher in the Rye">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/The_Catcher_in_the_Rye/ScdAEQAAQBAJ?hl=en&gbpv=0" target="_blank">The Catcher in the Rye</a></h3>
+            <h4>by J.D. Salinger (1951) – A teen named Holden wanders New York City and questions adult phoniness.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/The_Catcher_in_the_Rye/ScdAEQAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 15 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/81xVnX8OodL.jpg" alt="Lord of the Flies">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Lord_Of_The_Flies/F5k9EAAAQBAJ?hl=en&gbpv=0" target="_blank">Lord of the Flies</a></h3>
+            <h4>by William Golding (1954) – Schoolboys trapped on an island turn brutal and savage.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Lord_Of_The_Flies/F5k9EAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 16 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/81gkyAx5-RL._AC_UF1000,1000_QL80_.jpg" alt="To Kill a Mockingbird">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/To_Kill_a_Mockingbird/qOb1EAAAQBAJ?hl=en&gbpv=0" target="_blank">To Kill a Mockingbird</a></h3>
+            <h4>by Harper Lee (1960) – A southern lawyer defends a black man wrongly accused of a crime.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/To_Kill_a_Mockingbird/qOb1EAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 17 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDlzVhxDZG6NJVKud1We2yShweCU4o2YOJSUZYANXNLNnG9lbBc9mahxee&s=10" alt="Midnight's Children">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Salman_Rushdie_s_Midnight_s_Children/rdVvdK6l-CYC?hl=en&gbpv=0" target="_blank">Midnight's Children</a></h3>
+            <h4>by Salman Rushdie (1981) – Children born at the exact moment of India's independence hold magical powers.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Salman_Rushdie_s_Midnight_s_Children/rdVvdK6l-CYC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 18 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjclguGkcfD4hSp2qyy50VcgEgaEC4Q8CD3cdOQYtremwfCjQXm9najiJo&s=10" alt="Beloved">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Beloved/tsBhBAAAQBAJ?hl=en&gbpv=0" target="_blank">Beloved</a></h3>
+            <h4>Toni Morrison (1987) – A former slave is haunted by the ghost of her past.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Beloved/tsBhBAAAQBAJ?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 19 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/71+HFMIHZeL._SL1500_.jpg" alt="The Remains of the Day">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/The_Remains_of_the_Day/MSurBex2xcUC?hl=en&gbpv=0" target="_blank">The Remains of the Day</a></h3>
+            <h4>by Kazuo Ishiguro (1989) – An English butler looks back at his life of service and missed chances.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/The_Remains_of_the_Day/MSurBex2xcUC?hl=en&gbpv=0" target="_blank">Google Books Preview →</a>
+      </article>
+
+      <!-- Book 20 -->
+      <article class="book-card">
+        <div>
+          <img class="book-cover" src="https://m.media-amazon.com/images/I/71htmFCs-fL._SL1369_.jpg" alt="Atonement">
+          <div class="book-info">
+            <h3><a href="https://www.google.co.in/books/edition/Atonement/NKasHN-C2_4C?hl=en" target="_blank">Atonement</a></h3>
+            <h4>by Ian McEwan (2001) – A young girl’s false accusation ruins lives before World War II.</h4>
+          </div>
+        </div>
+        <a class="read-link" href="https://www.google.co.in/books/edition/Atonement/NKasHN-C2_4C?hl=en" target="_blank">Google Books Preview →</a>
+      </article>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
